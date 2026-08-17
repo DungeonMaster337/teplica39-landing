@@ -1,0 +1,17 @@
+# Папка с картинками — здесь ничего не должно исполняться.
+# Загрузчик и так пропускает только настоящие JPG/PNG/WEBP и сам придумывает имя файла,
+# это второй рубеж на случай кривой настройки сервера.
+RemoveHandler .php .phtml .php3 .php4 .php5 .php7 .php8 .phar .cgi .pl
+RemoveType .php .phtml .php3 .php4 .php5 .php7 .php8 .phar
+
+<IfModule mod_authz_core.c>
+  <FilesMatch "\.(php|phtml|php[0-9]|phar|cgi|pl|py|sh|htaccess)$">
+    Require all denied
+  </FilesMatch>
+</IfModule>
+<IfModule !mod_authz_core.c>
+  <FilesMatch "\.(php|phtml|php[0-9]|phar|cgi|pl|py|sh|htaccess)$">
+    Order allow,deny
+    Deny from all
+  </FilesMatch>
+</IfModule>
