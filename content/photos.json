@@ -1,0 +1,10 @@
+{
+  "models": {
+    "beta": "img/beta.jpg",
+    "sigma": "img/sigma.jpg",
+    "prima3": "img/prima3.jpg",
+    "prima4": "",
+    "yota": "img/yota.jpg"
+  },
+  "gallery": []
+}

@@ -1,0 +1,38 @@
+backend:
+  name: git-gateway
+  branch: main
+
+# Куда Decap кладёт загруженные файлы и какой путь пишет в JSON
+media_folder: "img"
+public_folder: "img"
+
+locale: "ru"
+
+collections:
+  - name: "photos"
+    label: "Фотографии сайта"
+    files:
+      - name: "models"
+        label: "Фото моделей теплиц"
+        file: "content/photos.json"
+        description: "Замените фото у нужной модели. Пустое поле — на сайте покажется заглушка."
+        fields:
+          - name: "models"
+            label: "Модели"
+            widget: "object"
+            fields:
+              - { name: "beta",   label: "Бета",     widget: "image", required: false }
+              - { name: "sigma",  label: "Сигма",    widget: "image", required: false }
+              - { name: "prima3", label: "Прима 3",  widget: "image", required: false }
+              - { name: "prima4", label: "Прима 4",  widget: "image", required: false }
+              - { name: "yota",   label: "Йота",     widget: "image", required: false }
+          - name: "gallery"
+            label: "Галерея «Наши теплицы на участках»"
+            label_singular: "фотография"
+            widget: "list"
+            required: false
+            summary: "{{fields.caption}}"
+            description: "Добавляйте сколько угодно фото. Пока список пуст — раздел на сайте не показывается."
+            fields:
+              - { name: "image",   label: "Фото",   widget: "image" }
+              - { name: "caption", label: "Подпись (необязательно)", widget: "string", required: false }
