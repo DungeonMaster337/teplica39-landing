@@ -3,8 +3,13 @@
     "beta": "img/beta.jpg",
     "sigma": "img/sigma.jpg",
     "prima3": "img/prima3.jpg",
-    "prima4": "",
+    "prima4": "img/prima4.jpg",
     "yota": "img/yota.jpg"
   },
-  "gallery": []
+  "gallery": [
+    {
+      "image": "img/prima3-inside.jpg",
+      "caption": "Прима 3 изнутри — прямые стены, грядки до самого края"
+    }
+  ]
 }

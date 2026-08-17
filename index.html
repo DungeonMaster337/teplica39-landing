@@ -228,7 +228,9 @@ header{position:sticky; top:0; z-index:60; background:color-mix(in srgb,var(--pa
 .tile.feature p{color:#D5E3CC}
 
 /* gallery */
-.gal{display:grid; grid-template-columns:repeat(auto-fill,minmax(240px,1fr)); gap:16px; margin-top:44px}
+/* auto-fit схлопывает пустые треки, верхняя граница 320px не даёт одной карточке
+   растянуться во всю ширину — при любом числе фото сетка выглядит одинаково */
+.gal{display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,320px)); gap:16px; margin-top:44px}
 .gal figure{margin:0; border-radius:14px; overflow:hidden; border:1px solid var(--line);
   background:var(--card); box-shadow:var(--sh-sm)}
 .gal img{width:100%; aspect-ratio:4/3; object-fit:cover; transition:transform .5s cubic-bezier(.2,.8,.2,1)}
