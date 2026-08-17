@@ -1,4 +1,18 @@
+# ── СЕКРЕТЫ. Репозиторий публичный — сюда ничего с паролями ──
+.env
+.env.local
+*.env
+!.env.example
+
+# внутренние файлы, клиенту и в публичный репо не нужны
 STATUS.md
+HANDOFF.md
 START-HERE.md
-.playwright-mcp/
+CLAUDE.md
+knowledge/
+tools/
 Фото/
+
+.playwright-mcp/
+__pycache__/
+*.pyc
