@@ -14,7 +14,6 @@ const PASS_FILE = __DIR__ . '/passwd.php';
 const MAX_BYTES = 8 * 1024 * 1024;
 
 const MODELS = [
-    'hero'   => 'Главное фото (первый экран)',
     'beta'   => 'Бета',
     'sigma'  => 'Сигма',
     'prima3' => 'Прима 3',
